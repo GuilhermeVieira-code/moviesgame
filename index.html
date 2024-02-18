@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aventura Cinematográfica Imperdível</title>
+    <title>Noite de Cinema com Bia</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
         .content { margin: 20px; }
@@ -11,23 +11,23 @@
     </style>
 </head>
 <body>
-    <h1>Aventura Cinematográfica Imperdível</h1>
+    <h1>Noite Inesquecível de Cinema</h1>
     <div class="content">
-        <p id="story">Clique em "Próxima Parte" para iniciar a história...</p>
+        <p id="story">Clique em "Próxima Parte" para desvendar a história...</p>
         <button id="nextButton" onclick="nextPart()">Próxima Parte</button>
         <div id="question" style="display: none;">
-            <p>Quer se juntar a essa aventura cinematográfica, onde nossas moedas valem mais?</p>
-            <button onclick="response(true)">Sim, claro!</button>
-            <button onclick="response(false)">Talvez outra vez.</button>
+            <p>Bia, aceita viver esta aventura cinematográfica comigo na noite de 26/02, após o trabalho?</p>
+            <button onclick="response(true)">Sim, vamos nessa!</button>
+            <button onclick="response(false)">Prefiro não, obrigada.</button>
         </div>
     </div>
     <script>
         const storyParts = [
-            "Num reino distante, existe um evento anual tão espetacular que todos os caminhos levam a ele...",
-            "Dizem que neste evento, as moedas de ouro dos aventureiros valem o dobro, ou até mais, abrindo portas para experiências e aventuras inigualáveis.",
-            "Nossos heróis, ao ouvirem rumores sobre esta celebração, percebem que não é apenas uma oportunidade, mas uma aventura que promete dobrar suas fortunas e diversões.",
-            "Eles sabem que cada escolha pode não apenas alterar seus destinos, mas também maximizar a alegria e as recompensas dessa jornada única.",
-            "Agora, diante deles, está a chance de embarcar nessa aventura imperdível. Uma aventura que promete não só dobrar suas moedas, mas também enriquecer suas vidas com memórias inestimáveis..."
+            "Na agitação de nossas vidas, surge uma pausa inesperada: uma noite estrelada prometida para 26/02, uma segunda-feira após o horário de trabalho.",
+            "Bia e seu companheiro de aventuras descobrem um convite misterioso, uma porta para um mundo de histórias e magia, um evento cinematográfico como nenhum outro.",
+            "Essa noite promete ser um refúgio das rotinas diárias, uma chance de mergulhar em aventuras e emoções compartilhadas, longe do comum.",
+            "Diante deles, a promessa de uma jornada onde a amizade e as histórias se entrelaçam, criando memórias que ecoarão muito além dessa noite especial.",
+            "Agora, com a promessa de uma escapada mágica das demandas do dia a dia, Bia tem diante de si uma escolha que pode transformar uma simples segunda-feira em uma noite inesquecível..."
         ];
         let currentPart = 0;
 
@@ -45,9 +45,9 @@
 
         function response(answer) {
             if (answer) {
-                alert("Fantástico! Prepare-se para dobrar a diversão e criar memórias inesquecíveis no cinema!");
+                alert("Maravilhoso, Bia! Vamos tornar essa segunda-feira uma noite memorável. Até lá!");
             } else {
-                alert("Entendo, talvez possamos encontrar outra aventura que valha a pena no futuro. Até lá!");
+                alert("Tudo bem, Bia. Espero que possamos compartilhar outra aventura em breve. Fica para a próxima!");
             }
         }
     </script>
