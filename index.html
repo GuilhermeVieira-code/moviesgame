@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convite Cinema</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .question { margin-bottom: 20px; }
+        button { margin: 5px; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Quiz do Cinema</h1>
+    <div class="question"></div>
+    <div class="answers"></div>
+    <script>
+        const questions = [
+            { question: "Qual seu filme favorito?", answers: ["Filme A", "Filme B", "Filme C"], correct: 1 },
+            // Adicione mais perguntas aqui
+            { question: "Quer ir ao cinema comigo?", answers: ["Sim", "Não"], correct: 0 }
+        ];
+        let currentQuestion = 0;
+
+        function showQuestion() {
+            document.querySelector('.question').textContent = questions[currentQuestion].question;
+            const answers = document.querySelector('.answers');
+            answers.innerHTML = '';
+            questions[currentQuestion].answers.forEach((answer, index) => {
+                const button = document.createElement('button');
+                button.textContent = answer;
+                button.onclick = () => checkAnswer(index);
+                answers.appendChild(button);
+            });
+        }
+
+        function checkAnswer(index) {
+            if(index === questions[currentQuestion].correct) {
+                currentQuestion++;
+                if(currentQuestion < questions.length) {
+                    showQuestion();
+                } else {
+                    document.body.innerHTML = '<h2>Ótimo! Vamos ao cinema então! 🎥</h2>';
+                }
+            } else {
+                alert("Ops! Tente novamente.");
+            }
+        }
+
+        showQuestion();
+    </script>
+</body>
+</html>
