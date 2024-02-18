@@ -1,51 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <title>Convite Cinema</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite para o Cinema</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
-        .question { margin-bottom: 20px; }
-        button { margin: 5px; padding: 10px; }
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .content { margin: 20px; }
+        button { padding: 10px 20px; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <h1>Quiz do Cinema</h1>
-    <div class="question"></div>
-    <div class="answers"></div>
+    <h1>Uma Aventura Cinematográfica</h1>
+    <div class="content">
+        <p id="story">Carregando história...</p>
+        <div id="question" style="display: none;">
+            <p>Quer ir ao cinema comigo?</p>
+            <button onclick="response(true)">Sim</button>
+            <button onclick="response(false)">Não</button>
+        </div>
+    </div>
     <script>
-        const questions = [
-            { question: "Qual seu filme favorito?", answers: ["Filme A", "Filme B", "Filme C"], correct: 1 },
-            // Adicione mais perguntas aqui
-            { question: "Quer ir ao cinema comigo?", answers: ["Sim", "Não"], correct: 0 }
+        const storyParts = [
+            "Tudo começou em uma tarde ensolarada...",
+            "Nossos heróis encontraram um mapa antigo, levando a uma aventura inesperada...",
+            "Eles enfrentaram desafios, descobriram tesouros escondidos e aprenderam lições valiosas...",
+            "Agora, uma nova jornada os espera. Uma jornada ao mundo mágico do cinema..."
         ];
-        let currentQuestion = 0;
+        let currentPart = 0;
 
-        function showQuestion() {
-            document.querySelector('.question').textContent = questions[currentQuestion].question;
-            const answers = document.querySelector('.answers');
-            answers.innerHTML = '';
-            questions[currentQuestion].answers.forEach((answer, index) => {
-                const button = document.createElement('button');
-                button.textContent = answer;
-                button.onclick = () => checkAnswer(index);
-                answers.appendChild(button);
-            });
-        }
+        document.getElementById('story').textContent = storyParts[currentPart];
 
-        function checkAnswer(index) {
-            if(index === questions[currentQuestion].correct) {
-                currentQuestion++;
-                if(currentQuestion < questions.length) {
-                    showQuestion();
-                } else {
-                    document.body.innerHTML = '<h2>Ótimo! Vamos ao cinema então! 🎥</h2>';
-                }
+        function nextPart() {
+            currentPart++;
+            if (currentPart < storyParts.length) {
+                document.getElementById('story').textContent = storyParts[currentPart];
             } else {
-                alert("Ops! Tente novamente.");
+                document.getElementById('story').style.display = 'none';
+                document.getElementById('question').style.display = 'block';
             }
         }
 
-        showQuestion();
+        function response(answer) {
+            if (answer) {
+                alert("Ótimo! Prepare-se para nossa aventura no cinema!");
+            } else {
+                alert("Que pena! Espero que possamos ir outra hora.");
+            }
+        }
+
+        // Iniciar a história com um clique
+        document.getElementById('story').onclick = function() {
+            nextPart();
+        };
     </script>
 </body>
 </html>
