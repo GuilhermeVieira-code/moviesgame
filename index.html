@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noite de Cinema com Bia</title>
+    <title>Noite Especial no Cinema</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
         .content { margin: 20px; }
@@ -11,23 +11,23 @@
     </style>
 </head>
 <body>
-    <h1>Noite Inesquecível de Cinema</h1>
+    <h1>Uma Noite de Aventuras Cinematográficas</h1>
     <div class="content">
-        <p id="story">Clique em "Próxima Parte" para desvendar a história...</p>
+        <p id="story">Clique em "Próxima Parte" para começar a aventura...</p>
         <button id="nextButton" onclick="nextPart()">Próxima Parte</button>
         <div id="question" style="display: none;">
-            <p>Bia, aceita viver esta aventura cinematográfica comigo na noite de 26/02, após o trabalho?</p>
+            <p>Pronta para uma noite mágica no cinema por apenas 12 moedas na segunda-feira, 26/02, após o trabalho?</p>
             <button onclick="response(true)">Sim, vamos nessa!</button>
             <button onclick="response(false)">Prefiro não, obrigada.</button>
         </div>
     </div>
     <script>
         const storyParts = [
-            "Na agitação de nossas vidas, surge uma pausa inesperada: uma noite estrelada prometida para 26/02, uma segunda-feira após o horário de trabalho.",
-            "Bia e seu companheiro de aventuras descobrem um convite misterioso, uma porta para um mundo de histórias e magia, um evento cinematográfico como nenhum outro.",
-            "Essa noite promete ser um refúgio das rotinas diárias, uma chance de mergulhar em aventuras e emoções compartilhadas, longe do comum.",
-            "Diante deles, a promessa de uma jornada onde a amizade e as histórias se entrelaçam, criando memórias que ecoarão muito além dessa noite especial.",
-            "Agora, com a promessa de uma escapada mágica das demandas do dia a dia, Bia tem diante de si uma escolha que pode transformar uma simples segunda-feira em uma noite inesquecível..."
+            "Bia e seu amigo descobrem um convite para uma noite única, marcada para uma segunda-feira especial, após um dia de trabalho.",
+            "Esse convite os guia para um lugar onde as histórias ganham vida, e por um valor simbólico de 12 moedas, a magia do cinema promete transportá-los para mundos desconhecidos.",
+            "Nessa noite, eles não buscam apenas entretenimento, mas sim experiências que enriquecem a alma, rindo e vivenciando juntos momentos que se tornarão memórias preciosas.",
+            "À medida que a data se aproxima, a expectativa cresce. Esta não é apenas uma saída ao cinema, mas uma aventura que promete ser tão valiosa quanto os filmes que irão assistir.",
+            "Agora, diante da oportunidade de compartilhar essa experiência, a grande questão é lançada..."
         ];
         let currentPart = 0;
 
@@ -45,9 +45,9 @@
 
         function response(answer) {
             if (answer) {
-                alert("Maravilhoso, Bia! Vamos tornar essa segunda-feira uma noite memorável. Até lá!");
+                alert("Que bom! Vamos tornar essa noite inesquecível.");
             } else {
-                alert("Tudo bem, Bia. Espero que possamos compartilhar outra aventura em breve. Fica para a próxima!");
+                alert("Entendo, espero que possamos encontrar outra aventura em breve.");
             }
         }
     </script>
