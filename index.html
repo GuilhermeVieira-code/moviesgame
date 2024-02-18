@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo da Noite de Cinema</title>
+    <title>Desafio Cinematográfico Imperdível</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
         .content { margin: 20px; }
@@ -11,23 +11,23 @@
     </style>
 </head>
 <body>
-    <h1>Aventura Cinematográfica: Um Convite Especial</h1>
+    <h1>Desafio da Noite de Cinema Imperdível</h1>
     <div class="content">
-        <p id="story">Clique em "Próxima Parte" para explorar a aventura...</p>
+        <p id="story">Clique em "Próxima Parte" para descobrir a aventura que te espera...</p>
         <button id="nextButton" onclick="nextPart()">Próxima Parte</button>
         <div id="question" style="display: none;">
-            <p>Pronta para escolher sua próxima aventura? Como seu companheiro nessa jornada, quero te convidar para uma noite de cinema em 26/02. Aceita o desafio?</p>
-            <button onclick="response(true)">Aceito o desafio!</button>
-            <button onclick="response(false)">Deixo passar este.</button>
+            <p>Como o capítulo final desta aventura, que tal se unir a mim na noite de 26/02 para uma experiência cinematográfica imperdível, após o trabalho? Está pronta para aceitar essa missão?</p>
+            <button onclick="response(true)">Aceito!</button>
+            <button onclick="response(false)">Declino.</button>
         </div>
     </div>
     <script>
         const storyParts = [
-            "Bem-vinda, aventureira! Você acaba de desbloquear um novo nível no jogo da vida: a Noite de Cinema Especial.",
-            "Neste nível, você tem a missão de descobrir novos mundos, enfrentar emoções desconhecidas e coletar momentos de alegria, tudo isso em uma jornada compartilhada na noite de 26/02.",
-            "Cada escolha leva a diferentes caminhos e histórias. Este convite é sua porta de entrada para uma aventura que promete romper a monotonia do cotidiano.",
-            "Como em todo bom jogo, você decide: aceitará o convite para desfrutar de uma experiência única, transformando uma simples segunda-feira em uma memória inesquecível?",
-            "A decisão é sua. Está pronta para aceitar esta missão e desfrutar das surpresas que essa noite tem a oferecer?"
+            "À medida que nos aventuramos no grande jogo da vida, um evento singular se destaca no horizonte: a SEMANA DO CINEMA, uma celebração onde a magia da sétima arte é oferecida por apenas 12 moedas.",
+            "Marcada especificamente para começar na segunda-feira, 26/02, essa ocasião imperdível promete ser um oásis de encantamento e descoberta, permitindo-nos escapar para realidades alternativas cheias de aventura, drama e riso.",
+            "Sua habilidade de encontrar maravilhas nas histórias e sua alegria contagiante tornam cada momento mais especial. É essa energia única que faz de você a companhia ideal para explorar as diversas narrativas que a SEMANA DO CINEMA tem a oferecer.",
+            "Cada filme da SEMANA DO CINEMA é uma oportunidade de enriquecer nossa visão de mundo, desafiando nossa imaginação e sentimentos. Sua apreciação pelo novo e pelo extraordinário é o complemento perfeito para essa experiência.",
+            "Com isso em mente, te convido para ser minha parceira nesta jornada cinematográfica. Aceita mergulhar nesta aventura imperdível e tornar a SEMANA DO CINEMA ainda mais memorável?"
         ];
         let currentPart = 0;
 
@@ -45,9 +45,9 @@
 
         function response(answer) {
             if (answer) {
-                alert("Excelente escolha! Prepare-se para uma noite cheia de aventuras e emoções. Estou ansioso(a) para compartilhar essa experiência com você.");
+                alert("Fantástico! Estou ansioso(a) para compartilhar essa aventura cinematográfica imperdível com você.");
             } else {
-                alert("Tudo bem, aventureira. Haverá muitas outras missões para explorarmos juntos. Até a próxima!");
+                alert("Compreendo, espero que possamos encontrar outra aventura para embarcar juntos no futuro.");
             }
         }
     </script>
