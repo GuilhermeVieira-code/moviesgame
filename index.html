@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convite para o Cinema</title>
+    <title>Aventura Cinematográfica Imperdível</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
         .content { margin: 20px; }
@@ -11,21 +11,23 @@
     </style>
 </head>
 <body>
-    <h1>Uma Aventura Cinematográfica</h1>
+    <h1>Aventura Cinematográfica Imperdível</h1>
     <div class="content">
-        <p id="story">Carregando história...</p>
+        <p id="story">Clique em "Próxima Parte" para iniciar a história...</p>
+        <button id="nextButton" onclick="nextPart()">Próxima Parte</button>
         <div id="question" style="display: none;">
-            <p>Quer ir ao cinema comigo?</p>
-            <button onclick="response(true)">Sim</button>
-            <button onclick="response(false)">Não</button>
+            <p>Quer se juntar a essa aventura cinematográfica, onde nossas moedas valem mais?</p>
+            <button onclick="response(true)">Sim, claro!</button>
+            <button onclick="response(false)">Talvez outra vez.</button>
         </div>
     </div>
     <script>
         const storyParts = [
-            "Tudo começou em uma tarde ensolarada...",
-            "Nossos heróis encontraram um mapa antigo, levando a uma aventura inesperada...",
-            "Eles enfrentaram desafios, descobriram tesouros escondidos e aprenderam lições valiosas...",
-            "Agora, uma nova jornada os espera. Uma jornada ao mundo mágico do cinema..."
+            "Num reino distante, existe um evento anual tão espetacular que todos os caminhos levam a ele...",
+            "Dizem que neste evento, as moedas de ouro dos aventureiros valem o dobro, ou até mais, abrindo portas para experiências e aventuras inigualáveis.",
+            "Nossos heróis, ao ouvirem rumores sobre esta celebração, percebem que não é apenas uma oportunidade, mas uma aventura que promete dobrar suas fortunas e diversões.",
+            "Eles sabem que cada escolha pode não apenas alterar seus destinos, mas também maximizar a alegria e as recompensas dessa jornada única.",
+            "Agora, diante deles, está a chance de embarcar nessa aventura imperdível. Uma aventura que promete não só dobrar suas moedas, mas também enriquecer suas vidas com memórias inestimáveis..."
         ];
         let currentPart = 0;
 
@@ -36,23 +38,18 @@
             if (currentPart < storyParts.length) {
                 document.getElementById('story').textContent = storyParts[currentPart];
             } else {
-                document.getElementById('story').style.display = 'none';
-                document.getElementById('question').style.display = 'block';
+                document.getElementById('nextButton').style.display = 'none'; // Esconde o botão "Próxima Parte"
+                document.getElementById('question').style.display = 'block'; // Mostra a pergunta do convite
             }
         }
 
         function response(answer) {
             if (answer) {
-                alert("Ótimo! Prepare-se para nossa aventura no cinema!");
+                alert("Fantástico! Prepare-se para dobrar a diversão e criar memórias inesquecíveis no cinema!");
             } else {
-                alert("Que pena! Espero que possamos ir outra hora.");
+                alert("Entendo, talvez possamos encontrar outra aventura que valha a pena no futuro. Até lá!");
             }
         }
-
-        // Iniciar a história com um clique
-        document.getElementById('story').onclick = function() {
-            nextPart();
-        };
     </script>
 </body>
 </html>
