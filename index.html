@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noite Especial no Cinema</title>
+    <title>Convite Cinematográfico para Bia</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
         .content { margin: 20px; }
@@ -11,23 +11,23 @@
     </style>
 </head>
 <body>
-    <h1>Uma Noite de Aventuras Cinematográficas</h1>
+    <h1>Bem-Vinda ao Jogo, Bia!</h1>
     <div class="content">
-        <p id="story">Clique em "Próxima Parte" para começar a aventura...</p>
+        <p id="story">Clique em "Próxima Parte" para embarcar nesta aventura...</p>
         <button id="nextButton" onclick="nextPart()">Próxima Parte</button>
         <div id="question" style="display: none;">
-            <p>Pronta para uma noite mágica no cinema por apenas 12 moedas na segunda-feira, 26/02, após o trabalho?</p>
-            <button onclick="response(true)">Sim, vamos nessa!</button>
-            <button onclick="response(false)">Prefiro não, obrigada.</button>
+            <p>Como minha companheira de aventuras, você aceita se juntar a mim nesta jornada cinematográfica especial na noite de 26/02, após o trabalho?</p>
+            <button onclick="response(true)">Sim, estou dentro!</button>
+            <button onclick="response(false)">Vou passar dessa vez.</button>
         </div>
     </div>
     <script>
         const storyParts = [
-            "Bia e seu amigo descobrem um convite para uma noite única, marcada para uma segunda-feira especial, após um dia de trabalho.",
-            "Esse convite os guia para um lugar onde as histórias ganham vida, e por um valor simbólico de 12 moedas, a magia do cinema promete transportá-los para mundos desconhecidos.",
-            "Nessa noite, eles não buscam apenas entretenimento, mas sim experiências que enriquecem a alma, rindo e vivenciando juntos momentos que se tornarão memórias preciosas.",
-            "À medida que a data se aproxima, a expectativa cresce. Esta não é apenas uma saída ao cinema, mas uma aventura que promete ser tão valiosa quanto os filmes que irão assistir.",
-            "Agora, diante da oportunidade de compartilhar essa experiência, a grande questão é lançada..."
+            "Seja muito bem-vinda ao nosso jogo sobre cinema, Bia! Uma jornada onde cada escolha nos leva a uma nova cena.",
+            "Neste jogo, você descobrirá que um evento especial está prestes a acontecer. Uma noite dedicada à magia do cinema, marcada para 26/02.",
+            "Essa será uma oportunidade para deixarmos o dia a dia de lado e mergulharmos em um mundo onde as histórias se desdobram diante dos nossos olhos, prometendo uma fuga emocionante da rotina.",
+            "Imagine-nos adentrando um lugar onde cada filme é uma porta para outra realidade, nos permitindo viver inúmeras vidas, amores e aventuras em apenas algumas horas.",
+            "E agora, o momento decisivo: nesta noite especial, gostaria de ser minha companheira de cinema, desfrutando de uma experiência única por apenas 12 moedas?"
         ];
         let currentPart = 0;
 
@@ -45,9 +45,9 @@
 
         function response(answer) {
             if (answer) {
-                alert("Que bom! Vamos tornar essa noite inesquecível.");
+                alert("Incrível! Mal posso esperar para compartilharmos essa aventura. Será uma noite para recordar!");
             } else {
-                alert("Entendo, espero que possamos encontrar outra aventura em breve.");
+                alert("Entendo, espero que possamos compartilhar outras aventuras em breve.");
             }
         }
     </script>
